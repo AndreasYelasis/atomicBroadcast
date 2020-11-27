@@ -1,6 +1,8 @@
 How to compile
 Go to the path and run:
-	gcc -Wall -g hwserver.c -lzmq -o hwserver
+	gcc -Wall -g hwserver.c -lzmq -o hwserver	# for c (includes lzmq)
+
+	gcc -lczmq -lzmq example.c -o example		# for c++ (includes lczmq & lzmq)
 
 You need first the warning and optimizations or debugging flags (e.g. -Wall for all warnings, -g for debugging information), 
 then the optional preprocessor flags (like -D or -I but you have none of them), 
